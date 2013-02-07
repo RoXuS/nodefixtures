@@ -6,6 +6,7 @@ Simply a node module to get the fixtures easily. Inspired by [fixtures](https://
 ## Installation
 
 Install via npm:
+
     $ npm install nodefixtures
 
 
