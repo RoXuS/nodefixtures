@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -7,30 +6,29 @@ var fs = require('fs')
   , path = require('path');
 
 /**
- * Fixtures constructor.
+ * Nodefixtures constructor.
  *
  */
 
-function Fixtures () {
+function Nodefixtures () {
 
-  this.fixtures = {};
+  this.Nodefixtures = {};
 
-  var fixtures_tmp = {}
-      , fixtures_path = "";
+  var Nodefixtures_tmp = {}
+      , Nodefixtures_path = "";
 };
 
 
 /**
- * Reload all the fixtures
- *  It is commonly used on setup when the fixtures has been modified.
+ * Reload all the Nodefixtures
  *  
  * @api public
  */
 
-Fixtures.prototype.reload = function () {
+Nodefixtures.prototype.reload = function () {
 
   var i
-    , fxs = _clone(this.fixtures);
+    , fxs = _clone(this.Nodefixtures);
 
   for ( i in fxs ) {
     if ( fxs.hasOwnProperty(i) ) {
@@ -44,29 +42,28 @@ Fixtures.prototype.reload = function () {
 
 
 /**
- * Load all the fixtures on path
- *  It is commonly used on setup when the fixtures has been modified.
+ * Load all the Nodefixtures on path
  *  
  * @api public
  */
 
-Fixtures.prototype.load = function () {
+Nodefixtures.prototype.load = function () {
   
-  if ( !this.fixtures_path ) throw new Error('fixtures path not found');
+  if ( !this.Nodefixtures_path ) throw new Error('Nodefixtures path not found');
 
-  var files = fs.readdirSync(this.fixtures_path);
-  var tmp_fixtures_path = this.fixtures_path;
-  var tmp_fixtures_tmp = [];
+  var files = fs.readdirSync(this.Nodefixtures_path);
+  var tmp_Nodefixtures_path = this.Nodefixtures_path;
+  var tmp_Nodefixtures_tmp = [];
 
   files.forEach(function(file){
       var file_name = file.replace('.js', '');
-      tmp_fixtures_tmp[file_name] = JSON.parse(fs.readFileSync( path.join("/" + tmp_fixtures_path, file), 'utf8')); 
+      tmp_Nodefixtures_tmp[file_name] = JSON.parse(fs.readFileSync( path.join("/" + tmp_Nodefixtures_path, file), 'utf8')); 
   });
 
-  this.fixtures = tmp_fixtures_tmp; 
+  this.Nodefixtures = tmp_Nodefixtures_tmp; 
 
   var i
-    , fxs = _clone(this.fixtures);
+    , fxs = _clone(this.Nodefixtures);
     
 
   for ( i in fxs ) {
@@ -80,15 +77,15 @@ Fixtures.prototype.load = function () {
 };
 
 /**
- * Reload all the fixtures
- *  It is commonly used on setup when the fixtures has been modified.
+ * Set Nodefixtures path
  *  
+ * @param String NodefixturesPath
  * @api public
  */
 
-Fixtures.prototype.setPath = function (fixturesPath) {
+Nodefixtures.prototype.setPath = function (NodefixturesPath) {
   var current_dir = path.join( module.parent.filename, '..');
-  this.fixtures_path = current_dir + "/" + fixturesPath;
+  this.Nodefixtures_path = current_dir + "/" + NodefixturesPath;
 };
 
 
@@ -120,4 +117,4 @@ function _clone (param) {
     return result;
 };
 
-module.exports = exports = new Fixtures();
+module.exports = exports = new Nodefixtures();
