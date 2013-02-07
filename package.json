@@ -5,7 +5,7 @@
   },
   "name": "nodefixtures",
   "description": "Tests with fixtures as JSON data",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/RoXuS/nodefixtures"
@@ -21,6 +21,6 @@
   "main": "index",
   "dependencies": {},
   "readmeFilename": "README.md",
-  "_id": "nodefixtures@0.0.1",
+  "_id": "nodefixtures@0.0.2",
   "_from": "nodefixtures@latest"
 }
