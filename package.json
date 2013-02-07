@@ -1,0 +1,26 @@
+{
+  "author": {
+    "name": "Julien Rousseau",
+    "email": "julienrss@gmail.com"
+  },
+  "name": "nodefixtures",
+  "description": "Tests with fixtures as JSON data",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RoXuS/nodefixtures"
+  },
+  "engines": {
+    "node": ">=v0.4.7"
+  },
+  "keywords": [
+    "fixtures",
+    "testing",
+    "bdd"
+  ],
+  "main": "index",
+  "dependencies": {},
+  "readmeFilename": "README.md",
+  "_id": "nodefixtures@0.0.1",
+  "_from": "nodefixtures@latest"
+}
